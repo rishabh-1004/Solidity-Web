@@ -1,0 +1,40 @@
+
+
+{% extends 'Header.html' %}
+
+{% block content %}
+
+<!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Transaction Details</h4> 
+                        <br><br><br><br>
+ 						    <p><strong>blockHash:</strong>{{data['blockHash']}}</p>
+                            <br>
+							<p><strong>blockNumber:</strong>{{data['blockNumber']}}</p>
+							<br>
+							<p><strong>from:</strong>{{data['from']}}</p>
+							<br>
+							<p><strong>gas:</strong>{{data['gas']}}</p>
+							<br>
+							<p><strong>gasPrice:</strong>{{data['gasPrice']}}</p>
+							<br>
+							<p><strong>TO:</strong>{{data['to']}}</p>
+							<br>                   
+                    <!-- /.col-lg-12 -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page Content -->
+        <!-- ============================================================== -->
+
+
+{% endblock %}

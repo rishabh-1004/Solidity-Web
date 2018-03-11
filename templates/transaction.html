@@ -1,0 +1,57 @@
+{% extends 'Header.html' %}
+
+{% block content %}
+
+
+<br>
+    
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Basic Table</h4> </div>
+                    
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Basic Table</h3>
+                            <p class="text-muted">Add class <code>.table</code></p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Hash</th>
+                                            <th>From</th>
+                                            <th>To</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       {% for transaction in data['transactions'] %}
+                                      <tr>
+                                        <td><a href="/transactions/{{transaction['hash']}}">{{transaction['hash']}}</a></td>
+                                        <td>{{transaction['from']}}</td> 
+                                        <td>{{transaction['to']}}</td> 
+                                        <td>{{transaction['value']}}</td> 
+                                      </tr>
+                                       
+                                      {%endfor%}
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2018 &copy; Brought to you by Eder.io</footer>
+        </div>
+
+
+{% endblock %}
